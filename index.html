@@ -101,6 +101,12 @@ function change() {
 filters.onchange = change;
 // Initially filter the markers
 change();
+// Marker Title popped up
+marker.eachLayer(function(m) {
+  m.openPopup();
+});
+
+</script>
 
 
 </script>
