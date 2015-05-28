@@ -46,4 +46,3 @@ map.on('locationfound', function(e) {
 map.on('locationerror', function() {
     geolocate.innerHTML = 'Position could not be found';
 });
-
