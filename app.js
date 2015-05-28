@@ -2,7 +2,7 @@ alert('testing');
 
 L.mapbox.accessToken = 'pk.eyJ1Ijoic3RyaWJib24iLCJhIjoiYmI3NzlmMWIzMTdhNDQyYTk2YTAzNjdiZDViYTIxZjQifQ.CG-W6rQhNckoNW7t3G8nYw';
 var geolocate = document.getElementById('geolocate');
-var map = L.mapbox.map('map', 'mapbox.streets');
+var map = L.mapbox.map('map', 'stribbon.6532ec44');
 
 var myLayer = L.mapbox.featureLayer().addTo(map);
 
