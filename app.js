@@ -1,9 +1,7 @@
 L.mapbox.accessToken = 'pk.eyJ1Ijoic3RyaWJib24iLCJhIjoiYmI3NzlmMWIzMTdhNDQyYTk2YTAzNjdiZDViYTIxZjQifQ.CG-W6rQhNckoNW7t3G8nYw';
-var geolocate = document.getElementById('geolocate');
 var map = L.mapbox.map('map', 'stribbon.ma114cc6');
-
+var geolocate = document.getElementById('geolocate');
 var myLayer = L.mapbox.featureLayer().addTo(map);
-
 var filters = document.getElementById('filters');
 var checkboxes = document.getElementsByClassName('filter');
 
