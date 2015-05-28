@@ -62,8 +62,8 @@ map.on('locationfound', function(e) {
             coordinates: [e.latlng.lng, e.latlng.lat]
         },
         properties: {
-            'title': 'Current location',
-            'marker-color': 'blue',
+            'title': 'Here I am!',
+            'marker-color': '#ff8888',
             'marker-symbol': 'star'
         }
     });
@@ -102,9 +102,7 @@ filters.onchange = change;
 // Initially filter the markers
 change();
 // Marker Title popped up
-map.featureLayer.eachLayer(function(m) {
-  m.openPopup();
-});
+
 
 
 </script>
