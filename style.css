@@ -2,6 +2,7 @@ body {
   margin:0;
   padding:0; 
 }
+
 #map { 
 position:absolute; 
 top:0; 
@@ -10,7 +11,7 @@ width:100%;
 }
 
 .ui-button {
-  background:#3887BE;
+  background:black;
   color:#FFF;
   display:block;
   position:absolute;
@@ -25,6 +26,6 @@ width:100%;
 }
 
 .ui-button:hover {
-  background:#3074a4;
-  color:#fff;
+  background:orange;
+  color:black;
 }
