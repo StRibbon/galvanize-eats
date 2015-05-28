@@ -64,48 +64,9 @@ map.on('locationerror', function() {
     geolocate.innerHTML = 'Position could not be found';
 });
 
-console.log("HELLO WORLD");
-</script>
-
-<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/mapbox-directions.js/v0.3.0/mapbox.directions.js'></script>
-<link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox.js/plugins/mapbox-directions.js/v0.3.0/mapbox.directions.css' type='text/css' />
-
-<div id='map'></div>
-<div id='inputs'></div>
-<div id='errors'></div>
-<div id='directions'>
-<div id='routes'></div>
-<div id='instructions'></div>
-</div>
-<script>
-L.mapbox.accessToken = 'pk.eyJ1Ijoic3RyaWJib24iLCJhIjoiYmI3NzlmMWIzMTdhNDQyYTk2YTAzNjdiZDViYTIxZjQifQ.CG-W6rQhNckoNW7t3G8nYw';
-var map = L.mapbox.map('map', 'stribbon.ma114cc6', {
-    zoomControl: false
-}).setView([40, -74.50], 9);
-
-// move the attribution control out of the way
-map.attributionControl.setPosition('bottomleft');
-
-// create the initial directions object, from which the layer
-// and inputs will pull data.
-var directions = L.mapbox.directions();
-
-var directionsLayer = L.mapbox.directions.layer(directions)
-    .addTo(map);
-
-var directionsInputControl = L.mapbox.directions.inputControl('inputs', directions)
-    .addTo(map);
-
-var directionsErrorsControl = L.mapbox.directions.errorsControl('errors', directions)
-    .addTo(map);
-
-var directionsRoutesControl = L.mapbox.directions.routesControl('routes', directions)
-    .addTo(map);
-
-var directionsInstructionsControl = L.mapbox.directions.instructionsControl('instructions', directions)
-    .addTo(map);
 
 </script>
+
 
 
 </body>
