@@ -53,3 +53,13 @@ body { margin:0; padding:0; }
     top: 90px;
     left: 10px;
 }
+
+.ui-select {
+  background:#fff;
+  position:absolute;
+  top:10px;
+  right:10px;
+  z-index:100;
+  padding:10px;
+  border-radius:3px;
+  }

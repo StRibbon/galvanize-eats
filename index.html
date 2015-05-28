@@ -14,6 +14,19 @@
 <div id='map'></div>
 <a href='#' id='geolocate' class='ui-button'>Find me</a>
 
+<div id='filters' class='ui-select'>
+  <div><input type='checkbox' checked=checked class='filter'
+             name='filter' id='fast-food' value='fast-food'/><label for='fast-food'>fast-food</label></div>
+  <div><input type='checkbox' checked=checked class='filter'
+             name='filter' id='restaurant' value='restaurant'/><label for='restaurant'>restaurant</label></div>
+  <div><input type='checkbox' checked=checked class='filter'
+             name='filter' id='cafe' value='cafe'/><label for='cafe'>cafe</label></div>
+  <div><input type='checkbox' checked=checked class='filter'
+             name='filter' id='bar' value='bar'/><label for='bar'>bar</label></div>
+</div>
+<div id='map'></div>
+
+
 <script>
   L.mapbox.accessToken = 'pk.eyJ1Ijoic3RyaWJib24iLCJhIjoiYmI3NzlmMWIzMTdhNDQyYTk2YTAzNjdiZDViYTIxZjQifQ.CG-W6rQhNckoNW7t3G8nYw';
 var geolocate = document.getElementById('geolocate');
@@ -63,6 +76,30 @@ map.on('locationfound', function(e) {
 map.on('locationerror', function() {
     geolocate.innerHTML = 'Position could not be found';
 });
+
+var filters = document.getElementById('filters');
+var checkboxes = document.getElementsByClassName('filter');
+
+function change() {
+    // Find all checkboxes that are checked and build a list of their values
+    var on = [];
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) on.push(checkboxes[i].value);
+    }
+    // The filter function takes a GeoJSON feature object
+    // and returns true to show it or false to hide it.
+    map.featureLayer.setFilter(function (f) {
+        // check each marker's symbol to see if its value is in the list
+        // of symbols that should be on, stored in the 'on' array
+        return on.indexOf(f.properties['marker-symbol']) !== -1;
+    });
+    return false;
+}
+
+// When the form is touched, re-filter markers
+filters.onchange = change;
+// Initially filter the markers
+change();
 
 
 </script>
