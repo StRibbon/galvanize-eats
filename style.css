@@ -15,7 +15,7 @@ p {
 
   .ui-button {
     text-decoration: none;
-    background:"black";
+    background:'black';
     color:#FFF;
     display:block;
     position:absolute;
@@ -29,7 +29,7 @@ p {
     border-radius:3px;
   }
   .ui-button:hover {
-    background:"blue";
+    background:'blue';
     color:#fff;
   }
 
